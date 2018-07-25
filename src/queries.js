@@ -11,7 +11,7 @@ const connectData = {
 
 const pool = new pg.Pool(connectData);
 
-function insertANewUser(req, res, next) {
+function insertANewUser(req, res) {
   const result = validateUser(req.body);
   if (result.error) {
     return res.status(400).json({ success: false, data: result.error.details[0].message });
