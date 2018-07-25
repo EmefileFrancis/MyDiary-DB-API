@@ -31,7 +31,7 @@ function insertANewUser(req, res, next) {
           return res.status(500).json({ success: false, data: error });
         }
         res.status(200).send({
-          status: 'success',
+          success: true,
           message: 'User added.',
         });
         done();

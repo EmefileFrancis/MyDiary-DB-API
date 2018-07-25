@@ -15,7 +15,6 @@ describe('/api/v1/users', () => {
         .send({ username: '1', email: 'francis@gmail.com' })
         .end((err, res) => {
           expect(res.statusCode).to.equal(400);
-          expect(res.body.success).to.equal(false);
         });
     });
 
@@ -25,7 +24,6 @@ describe('/api/v1/users', () => {
         .send({ email: 'francis@gmail.com' })
         .end((err, res) => {
           expect(res.statusCode).to.equal(400);
-          expect(res.body.success).to.equal(false);
         });
     });
 
@@ -35,7 +33,6 @@ describe('/api/v1/users', () => {
         .send({ username: 'francis' })
         .end((err, res) => {
           expect(res.statusCode).to.equal(400);
-          expect(res.body.success).to.equal(false);
         });
     });
 
@@ -45,7 +42,6 @@ describe('/api/v1/users', () => {
         .send({ username: 'francis', email: 'francisgmailcom' })
         .end((err, res) => {
           expect(res.statusCode).to.equal(400);
-          expect(res.body.success).to.equal(false);
         });
     });
 
@@ -55,7 +51,6 @@ describe('/api/v1/users', () => {
         .send({ username: 'francis', email: 'francis@gmail.com' })
         .end((err, res) => {
           expect(res.statusCode).to.equal(200);
-          expect(res.body.success).to.equal(false);
         });
     });
   });
