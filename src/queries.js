@@ -1,13 +1,12 @@
 
 import pg from 'pg';
-import config from 'config';
 import { User, validateUser } from './models/user';
 
 const connectData = {
-  user: config.get('user'),
-  database: config.get('database'),
-  password: config.get('password'),
-  port: config.get('port'),
+  user: 'eduonix',
+  database: 'mydiarydb',
+  password: 'password',
+  port: 5432,
 };
 
 const pool = new pg.Pool(connectData);
